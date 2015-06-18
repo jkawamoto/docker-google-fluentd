@@ -20,4 +20,7 @@ ENV TAG docker
 # Used for adding instance_name field to each log record.
 ENV INSTANCE na
 
+# Used for adding username field to each log record.
+ENV USERNAME na
+
 ADD ./conf/*.conf /etc/google-fluentd/config.d/
