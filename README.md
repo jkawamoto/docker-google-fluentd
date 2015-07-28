@@ -18,8 +18,8 @@ $ docker pull jkawamoto/docker-google-fluentd
 
 ## Usage
 ```sh
-$ docker run -d --name fluentd -e "INSTANCE=some-name" -v /var/lib:/var/lib \
-              --add-host="metadata:169.254.169.254" jkawamoto/docker-google-fluentd
+$ docker run -d --name fluentd -e "INSTANCE=some-name" \
+             -v /var/lib/docker:/var/lib/docker jkawamoto/docker-google-fluentd
 ```
 where environment variable **INSTANCE** is used to add the instance name to each log record.
 
