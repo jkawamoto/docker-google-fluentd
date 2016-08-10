@@ -1,4 +1,7 @@
 # Docker Google Fluentd
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![Dockerhub](https://img.shields.io/badge/dockerhub-jkawamoto%2Fdocker--google--fluentd-blue.svg)](https://hub.docker.com/r/jkawamoto/docker-google-fluentd/)
+[![Image information](https://images.microbadger.com/badges/image/jkawamoto/docker-google-fluentd.svg)](http://microbadger.com/images/jkawamoto/docker-google-fluentd)
 
 A Container logging other containers logs to Google Cloud Logging.
 
@@ -34,4 +37,4 @@ See [API document of Google Cloud Logging](https://cloud.google.com/logging/docs
 Used to add a username field to each log record.
 
 ## License
-This software is released under the MIT License, see LICENSE.
+This software is released under the MIT License, see [LICENSE](LICENSE).
