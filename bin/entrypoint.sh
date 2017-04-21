@@ -12,15 +12,15 @@ set -e
 
 export PATH=/sbin:/usr/sbin:/bin:/usr/bin
 
-readonly TD_AGENT_NAME=google-fluentd
-readonly TD_AGENT_HOME=/opt/google-fluentd
-readonly TD_AGENT_DEFAULT=/etc/default/google-fluentd
-readonly TD_AGENT_USER=root
-readonly TD_AGENT_GROUP=root
-readonly TD_AGENT_RUBY=/opt/google-fluentd/embedded/bin/ruby
-readonly TD_AGENT_BIN_FILE=/usr/sbin/google-fluentd
-readonly TD_AGENT_LOG_FILE=/var/log/google-fluentd/google-fluentd.log
-readonly TD_AGENT_OPTIONS='--use-v1-config --suppress-repeated-stacktrace'
+TD_AGENT_NAME=google-fluentd
+TD_AGENT_HOME=/opt/google-fluentd
+TD_AGENT_DEFAULT=/etc/default/google-fluentd
+TD_AGENT_USER=root
+TD_AGENT_GROUP=root
+TD_AGENT_RUBY=/opt/google-fluentd/embedded/bin/ruby
+TD_AGENT_BIN_FILE=/usr/sbin/google-fluentd
+TD_AGENT_LOG_FILE=/var/log/google-fluentd/google-fluentd.log
+TD_AGENT_OPTIONS='--use-v1-config --suppress-repeated-stacktrace'
 
 # timeout can be overridden from /etc/default/google-fluentd
 readonly STOPTIMEOUT=120
