@@ -10,10 +10,17 @@
 FROM ubuntu:latest
 MAINTAINER Junpei Kawamoto <kawamoto.junpei@gmail.com>
 
-RUN apt-get update && apt-get install -y curl
+RUN apt-get update && \
+    apt-get install -y curl && \
+    apt-get clean && \
+    rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/
 RUN curl -L https://storage.googleapis.com/signals-agents/logging/google-fluentd-install.sh | bash \
     && service google-fluentd stop
 RUN /opt/google-fluentd/embedded/bin/gem install fluent-plugin-record-reformer
+
+
+
+
 
 # Used as tags of log records.
 ENV TAG docker
