@@ -46,7 +46,7 @@ if [[ -f "${TD_AGENT_HOME}/embedded/lib/libjemalloc.so" ]]; then
   export LD_PRELOAD="${TD_AGENT_HOME}/embedded/lib/libjemalloc.so"
 fi
 
-if [[ $1 == "google-fluentd" ]]; then
+if [[ $# == 0 ]]; then
   echo -n "Starting ${TD_AGENT_NAME}"
   ulimit -n 65536 1>/dev/null 2>&1 || true
 
