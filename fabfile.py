@@ -1,4 +1,4 @@
-#pylint: skip-file
+# pylint: skip-file
 #
 # fabfile.py
 #
@@ -13,6 +13,7 @@ from fabric.contrib import files
 env.use_ssh_config = True
 
 PACKAGE = "google-fluentd"
+
 
 @task
 def deploy():
