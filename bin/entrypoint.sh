@@ -31,7 +31,8 @@ if [[ -f "${TD_AGENT_DEFAULT}" ]]; then
 fi
 
 # Arguments to run the daemon with
-readonly TD_AGENT_ARGS="${TD_AGENT_ARGS:-${TD_AGENT_BIN_FILE} --log ${TD_AGENT_LOG_FILE} ${TD_AGENT_OPTIONS}}"
+readonly TD_AGENT_ARGS="${TD_AGENT_ARGS:-${TD_AGENT_BIN_FILE} ${TD_AGENT_OPTIONS}}"
+# readonly TD_AGENT_ARGS="${TD_AGENT_ARGS:-${TD_AGENT_BIN_FILE} --log ${TD_AGENT_LOG_FILE} ${TD_AGENT_OPTIONS}}"
 
 # Exit if the package is not installed
 [[ -x "${TD_AGENT_RUBY}" ]] || exit 0
@@ -46,7 +47,7 @@ if [[ -f "${TD_AGENT_HOME}/embedded/lib/libjemalloc.so" ]]; then
   export LD_PRELOAD="${TD_AGENT_HOME}/embedded/lib/libjemalloc.so"
 fi
 
-if [[ $1 == "google-fluentd" ]]; then
+if [[ $# == 0 ]]; then
   echo -n "Starting ${TD_AGENT_NAME}"
   ulimit -n 65536 1>/dev/null 2>&1 || true
 
