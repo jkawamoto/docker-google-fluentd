@@ -1,6 +1,6 @@
 # Docker Google Fluentd
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
-[![Release](https://img.shields.io/badge/release-1.0.1-brightgreen.svg)](https://github.com/jkawamoto/docker-google-fluentd/releases/tag/v1.0.1)
+[![Release](https://img.shields.io/badge/release-1.0.2-brightgreen.svg)](https://github.com/jkawamoto/docker-google-fluentd/releases/tag/v1.0.2)
 [![Dockerhub](https://img.shields.io/badge/dockerhub-jkawamoto%2Fdocker--google--fluentd-blue.svg)](https://hub.docker.com/r/jkawamoto/docker-google-fluentd/)
 [![Image information](https://images.microbadger.com/badges/image/jkawamoto/docker-google-fluentd.svg)](http://microbadger.com/images/jkawamoto/docker-google-fluentd)
 
