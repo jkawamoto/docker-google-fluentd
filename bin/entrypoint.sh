@@ -31,7 +31,8 @@ if [[ -f "${TD_AGENT_DEFAULT}" ]]; then
 fi
 
 # Arguments to run the daemon with
-readonly TD_AGENT_ARGS="${TD_AGENT_ARGS:-${TD_AGENT_BIN_FILE} --log ${TD_AGENT_LOG_FILE} ${TD_AGENT_OPTIONS}}"
+readonly TD_AGENT_ARGS="${TD_AGENT_ARGS:-${TD_AGENT_BIN_FILE} ${TD_AGENT_OPTIONS}}"
+# readonly TD_AGENT_ARGS="${TD_AGENT_ARGS:-${TD_AGENT_BIN_FILE} --log ${TD_AGENT_LOG_FILE} ${TD_AGENT_OPTIONS}}"
 
 # Exit if the package is not installed
 [[ -x "${TD_AGENT_RUBY}" ]] || exit 0
